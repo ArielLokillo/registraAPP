@@ -1,13 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/asignaturas"></ion-back-button>
+    </ion-buttons>
     <ion-title>detalle</ion-title>
+    <ion-buttons slot="end">
+      <ion-icon (click)="deleteAsignatura()" name="trash-outline"></ion-icon>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">detalle</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-card>
+    <img alt="Silhouette of mountains" src="../../../../assets/icon/lista.PNG" />
+    <ion-card-header>
+      <ion-card-title>{{ asignatura.nombre}} </ion-card-title>
+      <ion-card-subtitle>{{ asignatura.siglas }}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{asignatura.seccion}}
+    </ion-card-content>
+    <ion-button [routerLink]="['/qr']" fill="outline" color="warning" shape="round">Generar código QR </ion-button>
+  </ion-card>
 </ion-content>
