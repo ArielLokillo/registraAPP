@@ -3,24 +3,29 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/asignaturas"></ion-back-button>
     </ion-buttons>
-    <ion-title>detalle</ion-title>
+    <ion-title>detalle asignatura</ion-title>
     <ion-buttons slot="end">
       <ion-icon (click)="deleteAsignatura()" name="trash-outline"></ion-icon>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content >
   <ion-card>
-    <img alt="Silhouette of mountains" src="../../../../assets/icon/lista.PNG" />
+    <img alt="Silhouette of mountains" src="https://cdn.pixabay.com/photo/2016/01/20/18/35/x-1152114_1280.png" />
     <ion-card-header>
-      <ion-card-title>{{ asignatura.nombre}} </ion-card-title>
-      <ion-card-subtitle>{{ asignatura.siglas }}</ion-card-subtitle>
+      <ion-card-title>{{ asignatura.nombre }}  </ion-card-title>
+      <ion-card-subtitle>{{ asignatura }}</ion-card-subtitle>
+      <ion-card-subtitle>{{ asignatura.seccion }}</ion-card-subtitle>
+      <ion-card-subtitle>{{ asignatura }}</ion-card-subtitle>
     </ion-card-header>
+
   
     <ion-card-content>
-      {{asignatura.seccion}}
+      {{ asignatura }} 
     </ion-card-content>
-    <ion-button [routerLink]="['/qr']" fill="outline" color="warning" shape="round">Generar código QR </ion-button>
+
+    <ion-button [routerLink]="['/asistencia-alumno']" fill="outline" color="warning" shape="round">ver asistencia</ion-button>
+    <ion-button [routerLink]="['/qr']" fill="outline" color="warning" shape="round">Escanear código QR</ion-button>
   </ion-card>
 </ion-content>

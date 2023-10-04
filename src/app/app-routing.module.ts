@@ -56,6 +56,22 @@ const routes: Routes = [
     path: 'agregar',
     loadChildren: () => import('./pages/asignaturas/agregar/agregar.module').then( m => m.AgregarPageModule)
   },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./pages/inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'login-docente',
+    loadChildren: () => import('./pages/login-docente/login-docente.module').then( m => m.LoginDocentePageModule)
+  },
+  {
+    path: 'inicio-alumno',
+    loadChildren: () => import('./pages/inicio-alumno/inicio-alumno.module').then( m => m.InicioAlumnoPageModule)
+  },
+  {
+    path: 'asistencia-alumno',
+    loadChildren: () => import('./pages/asistencia-alumno/asistencia-alumno.module').then( m => m.AsistenciaAlumnoPageModule)
+  },
 ];
 
 @NgModule({

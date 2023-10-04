@@ -13,7 +13,11 @@ export class DetallePage implements OnInit {
 
   asignatura! : Asignatura;
 
-  constructor(private router: Router,private toastController: ToastController, private alertController: AlertController,private asignaturaService: AsignaturasService, private activatedRoute: ActivatedRoute) { }
+  constructor(private router: Router,
+              private toastController: ToastController,
+              private alertController: AlertController,
+              private asignaturaService: AsignaturasService,
+               private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
     this.activatedRoute.paramMap.subscribe(param => {

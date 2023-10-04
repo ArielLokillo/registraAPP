@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-login-docente',
+  templateUrl: './login-docente.page.html',
+  styleUrls: ['./login-docente.page.scss'],
 })
-export class LoginPage implements OnInit {
+export class LoginDocentePage implements OnInit {
 
   constructor(private router: Router) { }
 
@@ -14,11 +14,10 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    this.router.navigate(['inicio-alumno'])
+    this.router.navigate(['home'])
   }
 
   register(){
     this.router.navigate(['register'])
   }
-
 }

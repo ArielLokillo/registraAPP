@@ -3,4 +3,5 @@ export interface Asignatura {
     nombre?: string;
     siglas?: string;
     seccion?: string;
+    docente?: string;
 }
